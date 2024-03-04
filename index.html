@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">    <!-- Tähestik, mida kasutame  -->
     <link rel="stylesheet" type="text/css" href="style.css"/> <!-- Ühendus CSS-i ja meie lehe vahel -->
-    <title>Minu veebileht</title> <!-- Veebilehe pealkiri, mida näidatakse brauseri tab-is -->
+    <title>Marko Kuura</title> <!-- Veebilehe pealkiri, mida näidatakse brauseri tab-is -->
 </head>
 
 <body>
@@ -12,10 +12,9 @@
 
 <div class="container" style="padding: 1em">
     <div id="textBox">
-        <h1>Nimetus</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur eget lectus mi. Donec lorem magna,
-            elementum ac dui in, posuere pharetra odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Curabitur eget lectus mi. Donec lorem magna, elementum ac dui in, posuere pharetra odio.</p>
+        <h1>Liik</h1>
+        <p>Marko Kuura on bioloogilise süstemaatika järgi loomaliik inimese perekonnast inimlaste
+            sugukonnast esikloomaliste seltsist, kuuludes seega kõrgemate imetajate hulka.</p>
     </div>
     <img id="photo" src="images/img.png">
 </div>
@@ -24,12 +23,21 @@
 
 <div class="container">
     <div class="card">
+        <img id="photo" src="images/question.png" height="280">
+        <h1>Kas sa teadsid?</h1>
+        <p style="font-size: 16px">Informatsiooni ei leidu, sest teda ei eksisteeri</p>
         <!-- Tee see osa ise! -->
     </div>
     <div class="card">
+        <img id="photo" src="images/opetaja.png" height="280">
+        <h1>See pole Kuura, ...</h1>
+        <p>aga ega ta ei ole kaugel Kuurast.</p>
         <!-- Tee see osa ise! -->
     </div>
     <div class="card">
+        <img id="photo" src="images/tund.png">
+        <h1>Õpilane: "Kas tohib küsida..."</h1>
+        <p>Kuura: "ÄRA HINGA MINU TUNNIS"</p>
         <!-- Tee see osa ise! -->
     </div>
 </div>
@@ -54,7 +62,18 @@
         <!-- Tee see osa ise! -->
     </div>
 </div>
-
+<button id="üllatus">Vajuta Mind!</button>
 </body>
-    
+<script>
+    let button = document.getElementById("üllatus");
+    button.addEventListener("click", function(){
+        let body = document.body;
+        if (body.style.background.toLowerCase() === "black"){
+            body.style.background = "white";
+        }
+        else{
+            body.style.background = "black";
+        }
+    });
+</script>
 </html>
